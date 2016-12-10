@@ -1,6 +1,8 @@
 # The Simplified Whiskas Model adapted from PuLP
 # Authors: Antony Phillips, Dr Stuart Mitchell  2007
 
+import sys
+print(sys.executable)
 from pyomo.aux.simplemodel import *
 
 # Create the 'prob' variable to contain the problem data
