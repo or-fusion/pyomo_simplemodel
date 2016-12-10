@@ -1,8 +1,5 @@
-[![Build Status](https://travis-ci.org/Pyomo/pyomo.svg?branch=master)](https://travis-ci.org/Pyomo/pyomo)
-[![Build status](https://ci.appveyor.com/api/projects/status/km08tbkv05ik14n9/branch/master?svg=true)](https://ci.appveyor.com/project/WilliamHart/pyomo/branch/master)
-[![codecov](https://codecov.io/gh/Pyomo/pyomo/branch/master/graph/badge.svg)](https://codecov.io/gh/Pyomo/pyomo)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Pyomo/pyomo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Pyomo/pyomo/?branch=master)
-[![Research software impact](http://depsy.org/api/package/pypi/Pyomo/badge.svg)](http://depsy.org/package/python/Pyomo)
+[![Build Status](https://travis-ci.org/Pyomo/pyomo.aux.simplemodel.svg?branch=master)](https://travis-ci.org/Pyomo/pyomo.aux.simplemodel)
+[![Build status](https://ci.appveyor.com/api/projects/status/km08tbkv05ik14n9/branch/master?svg=true)](https://ci.appveyor.com/project/WilliamHart/pyomo.aux.simplemodel/branch/master)
 
 ## Overview
 
@@ -46,16 +43,6 @@ richer set of modeling components than simple objectives and
 constraints.  In particular, the **Block** component supports the
 expression of hierarchical models with nested structure.  The
 SimpleModel class only supports a simple, flat optimization problems.
-
-### Installation
-
-#### PyPI [![PyPI](https://img.shields.io/pypi/v/pyomo.svg?maxAge=2592000)]() [![PyPI](https://img.shields.io/pypi/dm/pyomo.svg?maxAge=2592000)]()
-
-    pip install pyomo.aux.simplemodel
-    
-#### BinStar [![Binstar Badge](https://anaconda.org/conda-forge/pyomo/badges/version.svg)](https://anaconda.org/conda-forge/pyomo) [![Binstar Badge](https://anaconda.org/conda-forge/pyomo/badges/downloads.svg)](https://anaconda.org/conda-forge/pyomo)
-
-    conda install -c https://conda.anaconda.org/conda-forge pyomo.aux.simplemodel
 
 ### Developers
 
