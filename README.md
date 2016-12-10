@@ -6,7 +6,7 @@
 
 ## Overview
 
-The '''pyomo.aux.simplemodel''' package is software for modeling
+The **pyomo.aux.simplemodel** package is software for modeling
 and solving optimization problems.  This package is derived from
 [Pyomo](http://www.pyomo.org), and it provides functionality that
 is comparable to [PuLP](https://github.com/coin-or/pulp).  This
@@ -14,30 +14,36 @@ software is available under the BSD License.
 
 ### Description
 
-This software defines the '''SimpleModel''' class, which illustrates
+This software defines the **SimpleModel** class, which illustrates
 how Pyomo can be used in a simple, less object-oriented manner.
 Specifically, this class mimics the modeling style supported by
 PuLP.
 
 Here is a comparison of features between PuLP and SimpleModel:
-    . LP/MILP:      PuLP=YES, SimpleModel=YES
-    . NLP/MILNP:    PuLP=NO,  SimpleModel=YES
-    . Column-wise:  PuLP=YES, SimpleModel=NO
-    . Solvers:
-        CPLEX       PuLP=YES, SimpleModel=YES
-        Gurobi      PuLP=YES, SimpleModel=YES
-        XPRESS      PuLP=YES, SimpleModel=YES
-        GLPK        PuLP=YES, SimpleModel=YES
-        CBC         PuLP=YES, SimpleModel=YES
-        CoinMP      PuLP=YES, SimpleModel=NO
-        Ipopt       PuLP=NO,  SimpleModel=YES
-        ASL         PulP=NO,  SimpleModel=YES
 
-NOTE:  The '''SimpleModel''' class illustrates the basic steps in
+| Feature | PuLP | SimpleModel |
+|:---------|------:|-------------:|
+|LP/MILP  | YES  | YES         |
+| NLP/MINLP | NO | YES |
+|Column-wise | YES | NO |
+
+
+| Solver | PuLP | SimpleModel |
+|:----|-----:|-----:|
+| ASL | NO | YES |
+| CBC | YES | YES |
+| CoinMP | YES | NO |
+| CPLEX | YES | YES |
+| GLPK | YES | YES |
+| Gurobi | YES | YES |
+| Ipopt | NO | YES |
+| XPRESS | YES | YES |
+
+NOTE:  The **SimpleModel** class illustrates the basic steps in
 formulating and solving an optimization problem, but it is not meant
 to serve as a replacement for Pyomo.  Pyomo models supports a much
 richer set of modeling components than simple objectives and
-constraints.  In particular, the Block component supports the
+constraints.  In particular, the **Block** component supports the
 expression of hierarchical models with nested structure.  The
 SimpleModel class only supports a simple, flat optimization problems.
 
