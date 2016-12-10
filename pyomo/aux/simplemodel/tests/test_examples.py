@@ -4,7 +4,8 @@ import os.path
 import glob
 import sys
 
-testdir=os.path.abspath(os.path.join('..', '..', '..', '..', 'examples'))
+currdir = os.path.dirname(os.path.realpath(__file__))
+testdir=os.path.abspath(os.path.join(currdir, '..', '..', '..', '..', 'examples'))
 
 class TestExamples(unittest.TestCase): pass
 
