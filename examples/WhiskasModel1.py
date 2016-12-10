@@ -3,6 +3,9 @@
 
 import sys
 print(sys.executable)
+import pyomo
+import pyomo.aux
+import pyomo.aux.simplemodel
 from pyomo.aux.simplemodel import *
 
 # Create the 'prob' variable to contain the problem data
