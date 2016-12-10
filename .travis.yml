@@ -34,4 +34,5 @@ install:
 - pip install git+https://github.com/Pyomo/pyomo
 - python setup.py develop
 script:
+- which python
 - nosetests --verbosity=3 -x .
