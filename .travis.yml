@@ -32,7 +32,7 @@ install:
 - pip install coverage
 - pip install git+https://github.com/PyUtilib/pyutilib
 - pip install git+https://github.com/Pyomo/pyomo
-- python setup.py develop
+- python setup.py develop -N
 script:
 - which python
 - nosetests --verbosity=3 -x .
