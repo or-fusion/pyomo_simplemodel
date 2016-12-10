@@ -1,0 +1,4 @@
+Status: optimal
+ChickenPercent = 34.000000
+BeefPercent = 66.000000
+Total Cost of Ingredients per can = 0.970000

@@ -1,0 +1,4 @@
+Status = optimal
+x = 2.000000
+y = 2.000000
+Objective = 0.000000

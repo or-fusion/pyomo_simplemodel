@@ -1,0 +1,59 @@
+2 Set Declarations
+    c_index : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=None
+        [1, 2, 3]
+    o_index : Dim=0, Dimen=1, Size=1, Domain=None, Ordered=False, Bounds=None
+        [1]
+
+3 Var Declarations
+    x : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :   4.0 :     4 : False : False :  Reals
+    y : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :    -1 :  -1.0 :     1 : False : False :  Reals
+    z : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :   6.0 :  None : False : False :  Reals
+
+1 Objective Declarations
+    o : Size=1, Index=o_index, Active=True
+        Key : Active : Sense    : Expression
+          1 :   True : minimize : x + 4*y + 9*z
+
+1 Constraint Declarations
+    c : Size=3, Index=c_index, Active=True
+        Key : Lower : Body     : Upper : Active
+          1 :  -Inf :    x + y :   5.0 :   True
+          2 :  10.0 :    x + z :  +Inf :   True
+          3 :   7.0 :  - y + z :   7.0 :   True
+
+7 Declarations: o_index o c_index c x y z
+Model unknown
+
+  Variables:
+    x : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :   4.0 :     4 : False : False :  Reals
+    y : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :    -1 :  -1.0 :     1 : False : False :  Reals
+    z : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :   6.0 :  None : False : False :  Reals
+
+  Objectives:
+    o : Size=1, Index=o_index, Active=True
+        Key : Active : Value
+          1 :   True :  54.0
+
+  Constraints:
+    c : Size=3
+        Key : Lower : Body : Upper
+          1 :  None :  3.0 :   5.0
+          2 :  10.0 : 10.0 :  None
+          3 :   7.0 :  7.0 :   7.0
+Status: optimal
+x = 4.000000
+y = -1.000000
+z = 6.000000
+objective = 54.000000
