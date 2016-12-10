@@ -28,7 +28,8 @@ install:
 - pip install coverage
 - pip install git+https://github.com/PyUtilib/pyutilib
 - pip install git+https://github.com/Pyomo/pyomo
-- python setup.py develop -N
+- python setup.py develop -N --record foo
+- cat foo
 script:
 - which python
 - nosetests --verbosity=3 -x .
