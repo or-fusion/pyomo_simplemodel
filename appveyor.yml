@@ -8,10 +8,13 @@ environment:
     # isn't covered by this document) at the time of writing.
 
     - PYTHON: "C:\\Python27"
+      PYTHON_VERSION: "2.7"
       MINICONDA: "C:\\Miniconda"
     - PYTHON: "C:\\Python34"
+      PYTHON_VERSION: "3.4"
       MINICONDA: "C:\\Miniconda3"
     - PYTHON: "C:\\Python35"
+      PYTHON_VERSION: "3.5"
       MINICONDA: "C:\\Miniconda3"
     ##- PYTHON: "C:\\Python33"
     #- PYTHON: "C:\\Python34"
