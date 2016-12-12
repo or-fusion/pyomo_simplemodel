@@ -24,18 +24,6 @@ Here is a comparison of features between PuLP and SimpleModel:
 | NLP/MINLP | NO | YES |
 |Column-wise | YES | NO |
 
-
-| Solver | PuLP | SimpleModel |
-|:----|-----:|-----:|
-| ASL | NO | YES |
-| CBC | YES | YES |
-| CoinMP | YES | NO |
-| CPLEX | YES | YES |
-| GLPK | YES | YES |
-| Gurobi | YES | YES |
-| Ipopt | NO | YES |
-| XPRESS | YES | YES |
-
 NOTE:  The **SimpleModel** class illustrates the basic steps in
 formulating and solving an optimization problem, but it is not meant
 to serve as a replacement for Pyomo.  Pyomo models supports a much
