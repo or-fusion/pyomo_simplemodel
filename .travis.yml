@@ -28,8 +28,10 @@ install:
 - pip install coverage
 - pip install git+https://github.com/PyUtilib/pyutilib
 - pip install git+https://github.com/Pyomo/pyomo
+- which python
+- python --version
 - python setup.py develop -N
 - cat pyomo.aux.simplemodel.egg-info/SOURCES.txt
 script:
-- which python
+- which nosetests
 - nosetests --verbosity=3 -x .
