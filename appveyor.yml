@@ -44,7 +44,7 @@ install:
   - "python -m pip install git+https://github.com/PyUtilib/pyutilib"
   - "python -m pip install git+https://github.com/Pyomo/pyomo"
   - "python setup.py develop"
-  - "dir %PYTHON%\\Scripts"
+  - "dir %MINICONDA%\\Scripts"
 
 build: off
 
