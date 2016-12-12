@@ -33,10 +33,5 @@ install:
 - which python
 - python --version
 - python setup.py install
-- cat pyomo_aux_simplemodel.egg-info/SOURCES.txt
-- ls /home/travis/miniconda/envs/testenv/lib/python2.7/site-packages
-- printenv PATH
 script:
-- which nosetests
-- nosetests --verbosity=3 -x . --first-package-wins
-- cat /home/travis/build/Pyomo/pyomo_aux_simplemodel/examples/WhiskasModel1.out
+- nosetests --verbosity=3 -x .
