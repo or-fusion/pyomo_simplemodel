@@ -1,0 +1,6 @@
+name: pyomo_simplemodel
+dependencies:
+    - python2.7
+    - Pyomo
+    - sphinx
+    - numpydoc
