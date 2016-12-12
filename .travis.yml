@@ -32,7 +32,7 @@ install:
 - pip install git+https://github.com/Pyomo/pyomo
 - which python
 - python --version
-- python setup.py develop -N
+- python setup.py develop
 - cat pyomo.aux.simplemodel.egg-info/SOURCES.txt
 - ls /home/travis/miniconda/envs/testenv/lib/python2.7/site-packages
 - printenv PATH
