@@ -18,7 +18,7 @@ Specifically, this class mimics the modeling style supported by
 | NLP/MINLP | NO | YES |
 |Column-wise | YES | NO |
 
-[See the online documentation for futher details.](http://pyomo-simplemodel.readthedocs.org/en/latest/)
+[See the online documentation for further details.](http://pyomo-simplemodel.readthedocs.org/en/latest/)
 
 Note that **pyomo_simplemodel** is not meant
 to serve as a replacement for Pyomo.  Pyomo supports a much
