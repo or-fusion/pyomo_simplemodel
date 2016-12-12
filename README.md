@@ -7,14 +7,10 @@
 ### Description 
 The **pyomo_simplemodel** package is software for modeling
 and solving optimization problems.  This package is derived from
-[Pyomo](http://www.pyomo.org), and it provides functionality that
-is comparable to [PuLP](https://github.com/coin-or/pulp).  This
-software is available under the BSD License.
-
-This software defines the **SimpleModel** class, which illustrates
+[Pyomo](http://www.pyomo.org), and it defines the class **SimpleModel** that illustrates
 how Pyomo can be used in a simple, less object-oriented manner.
 Specifically, this class mimics the modeling style supported by
-PuLP. Here is a comparison of features between PuLP and SimpleModel:
+[PuLP](https://github.com/coin-or/pulp):
 
 | Feature | PuLP | SimpleModel |
 |:---------|------:|-------------:|
@@ -22,13 +18,16 @@ PuLP. Here is a comparison of features between PuLP and SimpleModel:
 | NLP/MINLP | NO | YES |
 |Column-wise | YES | NO |
 
-The **SimpleModel** class illustrates the basic steps in
-formulating and solving an optimization problem, but it is not meant
-to serve as a replacement for Pyomo.  Pyomo models supports a much
+[See the online documentation for further details.](http://pyomo-simplemodel.readthedocs.org/en/latest/)
+
+Note that **pyomo_simplemodel** is not meant
+to serve as a replacement for Pyomo.  Pyomo supports a much
 richer set of modeling components than simple objectives and
 constraints.  In particular, Pyomo's **Block** component supports the
-expression of hierarchical models with nested structure.  The
-**SimpleModel** class only supports a simple, non-hierarchical optimization problems.
+expression of hierarchical models with nested structure, while **pyomo_simplemodel** only
+supports a simple, non-hierarchical optimization problems.
+
+This software is available under the BSD License.
 
 ### Developers
 
