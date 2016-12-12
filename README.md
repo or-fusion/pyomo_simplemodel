@@ -21,13 +21,13 @@ PuLP. Here is a comparison of features between PuLP and SimpleModel:
 | NLP/MINLP | NO | YES |
 |Column-wise | YES | NO |
 
-NOTE:  The **SimpleModel** class illustrates the basic steps in
+The **SimpleModel** class illustrates the basic steps in
 formulating and solving an optimization problem, but it is not meant
 to serve as a replacement for Pyomo.  Pyomo models supports a much
 richer set of modeling components than simple objectives and
 constraints.  In particular, the **Block** component supports the
 expression of hierarchical models with nested structure.  The
-SimpleModel class only supports a simple, flat optimization problems.
+**SimpleModel** class only supports a simple, non-hierarchical optimization problems.
 
 ### Developers
 
