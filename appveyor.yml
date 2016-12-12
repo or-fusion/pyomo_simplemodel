@@ -20,9 +20,15 @@ environment:
     #- PYTHON: "C:\\Python35-x64"
 
 install:
-  # We need wheel installed to build wheels
+  # this installs the appropriate Miniconda (Py2/Py3, 32/64 bit),
+  # as well as pip, conda-build, and the binstar CLI
+  - powershell .\\continuous-integration\\appveyor\\install.ps1
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "python --version"
+  #
+  - "conda install -y --channel conda-forge glpk"
+  - "conda install -y --channel cachemeorg ipopt_bin"
+  #
   - "python -m pip install -U pip setuptools"
   - "python -m pip install nose"
   - "python -m pip install git+https://github.com/PyUtilib/pyutilib"
