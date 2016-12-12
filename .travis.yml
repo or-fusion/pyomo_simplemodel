@@ -38,5 +38,5 @@ install:
 - printenv PATH
 script:
 - which nosetests
-- nosetests --verbosity=3 -x . --first-package-wins --traverse-namespace
+- nosetests --verbosity=3 -x . --first-package-wins
 - cat /home/travis/build/Pyomo/pyomo_aux_simplemodel/examples/WhiskasModel1.out
