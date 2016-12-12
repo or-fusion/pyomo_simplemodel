@@ -39,3 +39,4 @@ install:
 script:
 - which nosetests
 - nosetests --verbosity=3 -x .
+- cat /home/travis/build/Pyomo/pyomo.aux.simplemodel/examples/WhiskasModel1.out
