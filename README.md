@@ -3,20 +3,17 @@
 
 ## Overview
 
-The **pyomo.aux.simplemodel** package is software for modeling
+### Description 
+The **pyomo_simplemodel** package is software for modeling
 and solving optimization problems.  This package is derived from
 [Pyomo](http://www.pyomo.org), and it provides functionality that
 is comparable to [PuLP](https://github.com/coin-or/pulp).  This
 software is available under the BSD License.
 
-### Description
-
 This software defines the **SimpleModel** class, which illustrates
 how Pyomo can be used in a simple, less object-oriented manner.
 Specifically, this class mimics the modeling style supported by
-PuLP.
-
-Here is a comparison of features between PuLP and SimpleModel:
+PuLP. Here is a comparison of features between PuLP and SimpleModel:
 
 | Feature | PuLP | SimpleModel |
 |:---------|------:|-------------:|
