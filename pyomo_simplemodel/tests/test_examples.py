@@ -17,10 +17,13 @@ for file_ in glob.glob('*.py'):
     dir_ = os.path.dirname(os.path.abspath(file_))+os.sep
     name='.'.join(bname.split('.')[:-1])
     tname = name
+    cmd = 'cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname))
+    print("DIR: %s" % dir_)
+    print("CMD: %s" % cmd)
     if os.path.exists(dir_+name+'.txt'):
-        TestExamples.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+'.txt', name=tname, tolerance=1e-7)
+        TestExamples.add_baseline_test(cmd=cmd,  baseline=dir_+name+'.txt', name=tname, tolerance=1e-7)
     elif os.path.exists(dir_+name+'py%d.txt' % sys.version_info[0]):
-        TestExamples.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+'.py%d.txt' % sys.version_info[0], name=tname, tolerance=1e-7)
+        TestExamples.add_baseline_test(cmd=cmd,  baseline=dir_+name+'.py%d.txt' % sys.version_info[0], name=tname, tolerance=1e-7)
 
 os.chdir(cwd)
 
