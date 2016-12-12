@@ -39,7 +39,6 @@ install:
   - "conda install -y --channel conda-forge glpk"
   - "conda install -y --channel cachemeorg ipopt_bin"
   #
-  #- "python -m pip install -U pip setuptools"
   - "python -m pip install nose"
   - "python -m pip install git+https://github.com/PyUtilib/pyutilib"
   - "python -m pip install git+https://github.com/Pyomo/pyomo"
@@ -57,7 +56,6 @@ test_script:
   # the interpreter you're using - Appveyor does not do anything special
   # to put the Python evrsion you want to use on PATH.
   - "nosetests -v"
-  - "type C:\\projects\\pyomo-simplemodel\\examples\\sp.out"
 
 #after_test:
   # This step builds your wheels.
