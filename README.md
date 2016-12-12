@@ -7,7 +7,7 @@
 ### Description 
 The **pyomo_simplemodel** package is software for modeling
 and solving optimization problems.  This package is derived from
-[Pyomo](http://www.pyomo.org), and it defines a class that illustrates
+[Pyomo](http://www.pyomo.org), and it defines the class **SimpleModel** that illustrates
 how Pyomo can be used in a simple, less object-oriented manner.
 Specifically, this class mimics the modeling style supported by
 [PuLP](https://github.com/coin-or/pulp). 
