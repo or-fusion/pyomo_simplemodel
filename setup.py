@@ -33,7 +33,7 @@ requires = [
     ]
 
 from setuptools import setup
-packages = _find_packages('pyomo')
+packages = _find_packages('pyomo_simplemodel')
 
 setup(name='pyomo_simplemodel',
       version='1.0',
