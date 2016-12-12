@@ -8,8 +8,11 @@ environment:
     # isn't covered by this document) at the time of writing.
 
     - PYTHON: "C:\\Python27"
+      MINICONDA: "C:\\Miniconda"
     - PYTHON: "C:\\Python34"
+      MINICONDA: "C:\\Miniconda3"
     - PYTHON: "C:\\Python35"
+      MINICONDA: "C:\\Miniconda3"
     ##- PYTHON: "C:\\Python33"
     #- PYTHON: "C:\\Python34"
     #- PYTHON: "C:\\Python27-x64"
@@ -22,8 +25,12 @@ environment:
 install:
   # this installs the appropriate Miniconda (Py2/Py3, 32/64 bit),
   # as well as pip, conda-build, and the binstar CLI
-  - powershell .\\continuous-integration\\appveyor\\install.ps1
-  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "SET PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
+  - "conda config --set always_yes yes --changeps1 no"
+  - "conda update -q conda"
+  - "conda info -a"
+  - "conda create -q -n testenv python=%PYTHON_VERSION%"
+  - "activate testenv"
   - "python --version"
   #
   - "conda install -y --channel conda-forge glpk"
