@@ -5,6 +5,7 @@ import sys
 print(sys.executable)
 import pyomo
 import pyomo.aux
+import pyomo.util
 import pyomo.aux.simplemodel
 from pyomo.aux.simplemodel import *
 
