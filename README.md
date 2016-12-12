@@ -7,14 +7,18 @@
 ### Description 
 The **pyomo_simplemodel** package is software for modeling
 and solving optimization problems.  This package is derived from
-[Pyomo](http://www.pyomo.org), and it provides functionality that
-is comparable to [PuLP](https://github.com/coin-or/pulp).  This
-software is available under the BSD License.
-
-This software defines a class that illustrates
+[Pyomo](http://www.pyomo.org), and it defines a class that illustrates
 how Pyomo can be used in a simple, less object-oriented manner.
 Specifically, this class mimics the modeling style supported by
-PuLP. [See the online documentation for futher details.](http://pyomo-simplemodel.readthedocs.org/en/latest/)
+[PuLP](https://github.com/coin-or/pulp). 
+
+| Feature | PuLP | SimpleModel |
+|:---------|------:|-------------:|
+|LP/MILP  | YES  | YES         |
+| NLP/MINLP | NO | YES |
+|Column-wise | YES | NO |
+
+[See the online documentation for futher details.](http://pyomo-simplemodel.readthedocs.org/en/latest/)
 
 Note that **pyomo_simplemodel** is not meant
 to serve as a replacement for Pyomo.  Pyomo supports a much
@@ -22,6 +26,8 @@ richer set of modeling components than simple objectives and
 constraints.  In particular, Pyomo's **Block** component supports the
 expression of hierarchical models with nested structure, while **pyomo_simplemodel** only
 supports a simple, non-hierarchical optimization problems.
+
+This software is available under the BSD License.
 
 ### Developers
 
