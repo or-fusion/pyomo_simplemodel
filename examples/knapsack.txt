@@ -1,0 +1,6 @@
+Status = optimal
+m[hammer] = 1.000000
+m[screwdriver] = 1.000000
+m[towel] = 1.000000
+m[wrench] = 0.000000
+Objective = 25.000000
