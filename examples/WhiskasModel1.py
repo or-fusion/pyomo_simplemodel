@@ -2,12 +2,7 @@
 # Authors: Antony Phillips, Dr Stuart Mitchell  2007
 
 import sys
-print(sys.executable)
-import pyomo
-import pyomo.aux
-import pyomo.util
-import pyomo.aux.simplemodel
-from pyomo.aux.simplemodel import *
+from pyomo_simplemodel import *
 
 # Create the 'prob' variable to contain the problem data
 prob = SimpleModel()

@@ -1,6 +1,6 @@
 # sp.py - Adapted from pyomo/examples/concrete
 
-from pyomo.aux.simplemodel import *
+from pyomo_simplemodel import *
 
 c=1.0
 b=1.5

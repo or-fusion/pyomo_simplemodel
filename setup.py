@@ -59,6 +59,5 @@ setup(name='pyomo_simplemodel',
           ],
       packages=packages,
       keywords=['optimization'],
-      namespace_packages=['pyomo', 'pyomo.aux'],
       install_requires=requires,
       )

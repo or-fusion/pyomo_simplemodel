@@ -1,6 +1,6 @@
 # multimodal1.py
 
-from pyomo.aux.simplemodel import *
+from pyomo_simplemodel import *
 from math import pi
 
 m = SimpleModel()

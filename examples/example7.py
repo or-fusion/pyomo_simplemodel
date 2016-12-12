@@ -1,6 +1,6 @@
 # Test for output of dual variables
 
-from pyomo.aux.simplemodel import *
+from pyomo_simplemodel import *
 
 # A new problem
 prob = SimpleModel()
@@ -30,6 +30,6 @@ for v in (x,y,z):
 
 print("objective= %f" % value(prob.objective()))
 
-print("\nSensitivity Analysis\nConstraint\t\tShadow Price\tSlack")
+print("\nSensitivity Analysis\nConstraint                     Shadow Price\tSlack")
 for c in prob.constraints():
-    print("%s : %s\t\t%s\t%s" % (c, c.expr, str(c.get_suffix_value('dual')), str(c.slack())))
+    print("%s : %-20s\t\t%s\t%s" % (c, c.expr, str(c.get_suffix_value('dual')), str(c.slack())))

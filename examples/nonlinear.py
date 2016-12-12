@@ -1,6 +1,6 @@
 # Adapted from the Pyomo examples/core/simple.py problem
 
-from pyomo.aux.simplemodel import *
+from pyomo_simplemodel import *
 
 m = SimpleModel()
 x1 = m.var('x1')
