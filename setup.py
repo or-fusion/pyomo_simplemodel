@@ -35,7 +35,7 @@ requires = [
 from setuptools import setup
 packages = _find_packages('pyomo')
 
-setup(name='pyomo.aux.simplemodel',
+setup(name='pyomo_aux_simplemodel',
       version='1.0',
       maintainer='William E. Hart',
       maintainer_email='wehart@sandia.gov',
