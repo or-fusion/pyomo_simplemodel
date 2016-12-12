@@ -39,7 +39,7 @@ install:
   - "conda install -y --channel conda-forge glpk"
   - "conda install -y --channel cachemeorg ipopt_bin"
   #
-  - "python -m pip install -U pip setuptools"
+  #- "python -m pip install -U pip setuptools"
   - "python -m pip install nose"
   - "python -m pip install git+https://github.com/PyUtilib/pyutilib"
   - "python -m pip install git+https://github.com/Pyomo/pyomo"
