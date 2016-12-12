@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/Pyomo/pyomo.aux.simplemodel.svg?branch=master)](https://travis-ci.org/Pyomo/pyomo.aux.simplemodel)
-[![Build status](https://ci.appveyor.com/api/projects/status/km08tbkv05ik14n9/branch/master?svg=true)](https://ci.appveyor.com/project/WilliamHart/pyomo.aux.simplemodel/branch/master)
+[![Build Status](https://travis-ci.org/Pyomo/pyomo_aux_simplemodel.svg?branch=master)](https://travis-ci.org/Pyomo/pyomo_aux_simplemodel)
+[![Build status](https://ci.appveyor.com/api/projects/status/km08tbkv05ik14n9/branch/master?svg=true)](https://ci.appveyor.com/project/WilliamHart/pyomo_aux_simplemodel/branch/master)
 
 ## Overview
 
