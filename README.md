@@ -1,22 +1,20 @@
 [![Build Status](https://travis-ci.org/Pyomo/pyomo_simplemodel.svg?branch=master)](https://travis-ci.org/Pyomo/pyomo_simplemodel)
 [![Build status](https://ci.appveyor.com/api/projects/status/a3o40900jlx6x6jx?svg=true)](https://ci.appveyor.com/project/WilliamHart/pyomo-simplemodel)
+[![Documentation Status](https://readthedocs.org/projects/pyomo-simplemodel/badge/?version=latest)](http://pyomo-simplemodel.readthedocs.org/en/latest/)
 
 ## Overview
 
-The **pyomo.aux.simplemodel** package is software for modeling
+### Description 
+The **pyomo_simplemodel** package is software for modeling
 and solving optimization problems.  This package is derived from
 [Pyomo](http://www.pyomo.org), and it provides functionality that
 is comparable to [PuLP](https://github.com/coin-or/pulp).  This
 software is available under the BSD License.
 
-### Description
-
 This software defines the **SimpleModel** class, which illustrates
 how Pyomo can be used in a simple, less object-oriented manner.
 Specifically, this class mimics the modeling style supported by
-PuLP.
-
-Here is a comparison of features between PuLP and SimpleModel:
+PuLP. Here is a comparison of features between PuLP and SimpleModel:
 
 | Feature | PuLP | SimpleModel |
 |:---------|------:|-------------:|
@@ -24,25 +22,13 @@ Here is a comparison of features between PuLP and SimpleModel:
 | NLP/MINLP | NO | YES |
 |Column-wise | YES | NO |
 
-
-| Solver | PuLP | SimpleModel |
-|:----|-----:|-----:|
-| ASL | NO | YES |
-| CBC | YES | YES |
-| CoinMP | YES | NO |
-| CPLEX | YES | YES |
-| GLPK | YES | YES |
-| Gurobi | YES | YES |
-| Ipopt | NO | YES |
-| XPRESS | YES | YES |
-
-NOTE:  The **SimpleModel** class illustrates the basic steps in
+The **SimpleModel** class illustrates the basic steps in
 formulating and solving an optimization problem, but it is not meant
 to serve as a replacement for Pyomo.  Pyomo models supports a much
 richer set of modeling components than simple objectives and
-constraints.  In particular, the **Block** component supports the
+constraints.  In particular, Pyomo's **Block** component supports the
 expression of hierarchical models with nested structure.  The
-SimpleModel class only supports a simple, flat optimization problems.
+**SimpleModel** class only supports a simple, non-hierarchical optimization problems.
 
 ### Developers
 
