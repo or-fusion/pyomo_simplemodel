@@ -69,7 +69,7 @@ status = prob.solve("glpk")
 print("Status: %s" %  status.solver.termination_condition)
 
 # Print the optimum
-for v in ingredient_vars:
+for v in sorted(ingredient_vars):
     print("%s = %f" % (ingredient_vars[v], value(ingredient_vars[v])))
 
 # Print the optimized objective function value

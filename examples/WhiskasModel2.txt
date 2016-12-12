@@ -1,8 +1,8 @@
 Status: optimal
-Ingr[MUTTON] = 0.000000
-Ingr[WHEAT] = 0.000000
 Ingr[BEEF] = 60.000000
 Ingr[CHICKEN] = 0.000000
-Ingr[RICE] = 0.000000
 Ingr[GEL] = 40.000000
+Ingr[MUTTON] = 0.000000
+Ingr[RICE] = 0.000000
+Ingr[WHEAT] = 0.000000
 Total Cost of Ingredients per can = 0.520000 

@@ -19,6 +19,8 @@ for file_ in glob.glob('*.py'):
     tname = name
     if os.path.exists(dir_+name+'.txt'):
         TestExamples.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+'.txt', name=tname, tolerance=1e-7)
+    elif os.path.exists(dir_+name+'py%d.txt' % sys.version_info[0]):
+        TestExamples.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+'.py%d.txt' % sys.version_info[0], name=tname, tolerance=1e-7)
 
 os.chdir(cwd)
 
