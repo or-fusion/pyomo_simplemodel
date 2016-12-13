@@ -1,6 +1,4 @@
-#
-# Knapsack Problem - SimpleModel
-#
+# knapsack.py
 
 from pyomo.contrib.simplemodel import *
 

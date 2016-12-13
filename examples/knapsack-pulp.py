@@ -1,6 +1,4 @@
-#
-# Knapsack Problem - PuLP
-#
+# knapsack-pulp.py
 
 from pulp import *
 

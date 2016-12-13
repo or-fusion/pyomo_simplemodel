@@ -1,6 +1,4 @@
-#
-# Knapsack Problem - Pyomo
-#
+# knapsack-pyomo.py
 
 from pyomo.environ import *
 
