@@ -1,7 +1,0 @@
-Document SimpleModel methods
-
-Document the VirtualSet types
-
-NLP example: sodacan
-
-Nested example: newsvendor

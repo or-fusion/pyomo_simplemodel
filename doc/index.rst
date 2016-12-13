@@ -35,6 +35,7 @@ Column-wise   YES           NO
    sodacan
    newsvendor
    gettingstarted
+   source
 
 
 Indices and tables
