@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Pyomo/pyomocontrib_simplemodel.svg?branch=master)](https://travis-ci.org/Pyomo/pyomocontrib_simplemodel)
-[![Build status](https://ci.appveyor.com/api/projects/status/a3o40900jlx6x6jx?svg=true)](https://ci.appveyor.com/project/WilliamHart/pyomocontrib-simplemodel)
+[![Build status](https://ci.appveyor.com/api/projects/status/urr88klp2dxsr5bt?svg=true)](https://ci.appveyor.com/project/WilliamHart/pyomocontrib-simplemodel)
 [![Documentation Status](https://readthedocs.org/projects/pyomocontrib-simplemodel/badge/?version=latest)](http://pyomocontrib-simplemodel.readthedocs.org/en/latest/)
 
 ## Overview
