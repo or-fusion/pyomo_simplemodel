@@ -1,36 +1,6 @@
-.. pyomocontrib_simplemodel documentation master file, created by
-   sphinx-quickstart on Mon Dec 12 16:08:36 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-==============================================
-Getting Started with pyomo.contrib.simplemodel
-==============================================
-
---------
-Overview
---------
-
-The **pyomo.contrib.simplemodel** package is software for modeling
-and solving optimization problems. This package is derived from
-`Pyomo <http://www.pyomo.org>`_, and it defines the class **SimpleModel**
-that illustrates how Pyomo can be used in a simple, less object-oriented
-manner. Specifically, this class mimics the modeling style supported
-by `PuLP <https://github.com/coin-or/pulp>`_:
-
-============ ===== ============
-Feature      PuLP  SimpleModel
-============ ===== ============
-LP/MILP       YES          YES
-NLP/MINLP      NO          YES
-Column-wise   YES           NO
-============ ===== ============
-
-.. note:: SimpleModel is not meant to serve as a replacement for Pyomo. Pyomo supports a much richer set of modeling components than simple objectives and constraints. In particular, Pyomo's **Block** component supports the expression of hierarchical models with nested structure, while SimpleModel only supports a simple, non-hierarchical optimization problems.
-
-----------------
+================
 Knapsack Example
-----------------
+================
 
 The `Knapsack Problem <https://en.wikipedia.org/wiki/Knapsack_problem>`_
 considers the problem of selecting a set of items whose weight is
@@ -61,6 +31,7 @@ an integer program:
 The following sections illustrate how this optimization problem can be
 formulated with (1) SimpleModel, (2) PuLP, and (3) Pyomo.
 
+-----------------------
 SimpleModel Formulation
 -----------------------
 
@@ -86,6 +57,7 @@ the objective value can be accessed with using the ``objective()``
 method.
 
 
+----------------
 PuLP Formulation
 ----------------
 
@@ -98,6 +70,7 @@ scripts declare a problem class that is used to declare variables,
 the objective and constraint, and to perform optimization.
 
 
+-----------------
 Pyomo Formulation
 -----------------
 
@@ -115,45 +88,3 @@ variable objects directly (e.g. ``x``).  Thus, modeling
 in Pyomo is more verbose (especially when long model names are
 used).
 
-
-----------
-Discussion
-----------
-
-Installation
-------------
-
-The **pyomo.contrib.simplemodel** package is distributed in the
-**pyomocontrib_simplemodel** software.  This package can be installed
-with ``pip`` as follows:
-
-::
-
-    pip install pyomocontrib_simplemodel
-
-However, once installed this package can be imported as follows:
-
-::
-
-    import pyomo.contrib.simplemodel
-
-Modeling Capabilities
----------------------
-
-TODO
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   knapsack
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
