@@ -1,4 +1,4 @@
-# sp.py
+# newsvendor.py
 
 from pyomo.contrib.simplemodel import *
 
