@@ -13,6 +13,9 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import os
+import sys
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -34,8 +37,11 @@
 extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
     'sphinx.ext.ifconfig']
     #'sphinx.ext.githubpages']
+
+viewcode_import = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -50,9 +56,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'pyomocontrib_simplemodel'
-copyright = '2016, pyomocontrib_simplemodel'
-author = 'pyomocontrib_simplemodel'
+project = u'pyomocontrib_simplemodel'
+copyright = u'2016, pyomocontrib_simplemodel'
+author = u'pyomocontrib_simplemodel'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -87,7 +93,15 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if not on_rtd:  # only import and set the theme if we're building docs locally
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]     
+else:
+    html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -131,8 +145,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'pyomocontrib_simplemodel.tex', 'pyomo\\_simplemodel Documentation',
-     'pyomo\\_simplemodel', 'manual'),
+    (master_doc, 'pyomocontrib_simplemodel.tex', 'pyomocontrib\\_simplemodel Documentation',
+     'pyomocontrib\\_simplemodel', 'manual'),
 ]
 
 
