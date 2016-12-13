@@ -1,6 +1,6 @@
 # sodacan.py
 
-from pyomo_simplemodel import *
+from pyomo.contrib.simplemodel import *
 from math import pi
 
 m = SimpleModel()

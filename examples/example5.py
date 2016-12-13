@@ -4,7 +4,7 @@
 # G. Cornuejols, M. Dawande, A class of hard small 0-1 programs, 1998.
 # With m>=4, these problems are often *very* difficult.
 
-from pyomo_simplemodel import *
+from pyomo.contrib.simplemodel import *
 from random import *
 
 seed(127398270)

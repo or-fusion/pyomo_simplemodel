@@ -2,7 +2,7 @@
 # problem included in the GLPK # 4.4 distribution. 
 # It's a hard knapsack problem.
 
-from pyomo_simplemodel import *
+from pyomo.contrib.simplemodel import *
 from math import *
 
 # A new problem

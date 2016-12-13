@@ -5,7 +5,7 @@
 # Vladimir I. Norkin, Yuri M. Ermoliev, Andrzej Ruszczynski
 # IIASA, WP-94-021, April 1994 (revised October 1995).
 
-from pyomo_simplemodel import *
+from pyomo.contrib.simplemodel import *
 from random import *
 
 seed(187034987)

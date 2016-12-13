@@ -1,6 +1,6 @@
 # Test for output of dual variables
 
-from pyomo_simplemodel import *
+from pyomo.contrib.simplemodel import *
 
 # A new problem
 prob = SimpleModel()

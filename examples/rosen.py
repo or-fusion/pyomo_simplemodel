@@ -1,6 +1,6 @@
 # rosen.py - Adapted from pyomo/examples/concrete/rosen.py
 
-from pyomo_simplemodel import *
+from pyomo.contrib.simplemodel import *
 
 m = SimpleModel()
 
