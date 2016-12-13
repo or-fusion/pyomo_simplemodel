@@ -1,4 +1,4 @@
-name: pyomo_simplemodel
+name: pyomocontrib_simplemodel
 dependencies:
     - python2.7
     - Pyomo
