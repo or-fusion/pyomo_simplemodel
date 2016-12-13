@@ -1,4 +1,4 @@
-# sp.py - Adapted from pyomo/examples/concrete
+# sp.py
 
 from pyomo.contrib.simplemodel import *
 
@@ -19,17 +19,12 @@ for i in scenarios:
 
 m += sum(y[i] for i in scenarios)/5.0
 
-# Optimize
 status = m.solve("glpk")
 
-# Print the status of the solved LP
 print("Status = %s" % status.solver.termination_condition)
 
-# Print the value of the variables at the optimum
 print("%s = %f" % (x, value(x)))
 for i in y:
     print("%s = %f" % (y[i], value(y[i])))
-
-# Print the value of the objective
 print("Objective = %f" % value(m.objective()))
 
