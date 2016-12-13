@@ -1,4 +1,4 @@
-# sp-pyomo.py
+# newsvendor-pyomo.py
 
 from pyomo.environ import *
 
