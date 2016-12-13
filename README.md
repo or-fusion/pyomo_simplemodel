@@ -20,13 +20,6 @@ Specifically, this class mimics the modeling style supported by
 
 [See the online documentation for further details.](http://pyomocontrib-simplemodel.readthedocs.org/en/latest/)
 
-Note that **pyomocontrib_simplemodel** is not meant
-to serve as a replacement for Pyomo.  Pyomo supports a much
-richer set of modeling components than simple objectives and
-constraints.  In particular, Pyomo's **Block** component supports the
-expression of hierarchical models with nested structure, while **pyomocontrib_simplemodel** only
-supports a simple, non-hierarchical optimization problems.
-
 This software is available under the BSD License.
 
 ### Developers
