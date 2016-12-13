@@ -36,7 +36,7 @@ from setuptools import setup
 packages = _find_packages('pyomocontrib_simplemodel')
 
 setup(name='pyomocontrib_simplemodel',
-      version='1.0',
+      version='1.0.1',
       maintainer='William E. Hart',
       maintainer_email='wehart@sandia.gov',
       url='http://pyomo.org',
