@@ -11,7 +11,7 @@ considers the problem of determining optimal inventory levels.
 Given fixed prices and an uncertain demand, the problem is to determine
 inventory levels that maximize the expected profit for the newsvendor.
 
-The following formulation is adapted from Shapiro and Philpott.  A
+The following formulation is adapted from Shapiro and Philpott [ShaPhi]_.  A
 company has decided to order a quantity `x` of a product to satisfy
 demand `d`.  The per-unit cost of ordering is `c`, and if demand `d` is
 greater than `x`, `d>x`, then the back-order penalty is `b` per unit.  If
@@ -100,4 +100,7 @@ are several advantages of this approach:
 
 * Extending and refining block models is simpler.  For example, if a multi-dimensional index was needed for this model, then ``y`` would need to be modified to reflect that.  In complex application with many variables and other components, the block structure helps coordinate and simplify this type of change.
 
+
+
+.. [ShaPhi] A. Shapiro and A. Philpott.  *A Tutorial on Stochastic Programming*.  2007. `(weblink) <http://www2.isye.gatech.edu/people/faculty/Alex_Shapiro/TutorialSP.pdf>`_
 
