@@ -33,6 +33,7 @@ Column-wise   YES           NO
 
    knapsack
    sodacan
+   newsvendor
    gettingstarted
 
 

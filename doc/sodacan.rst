@@ -1,6 +1,10 @@
-================
+===========================
+Modeling Nonlinear Problems
+===========================
+
+----------------
 Soda Can Example
-================
+----------------
 
 Finding the optimal dimensions of a soda can is a simple nonlinear
 optimization problem.  We consider an idealized soda can that is

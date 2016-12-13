@@ -1,6 +1,10 @@
-================
+=====================================
+Comparing SimpleModel, PuLP and Pyomo
+=====================================
+
+----------------
 Knapsack Example
-================
+----------------
 
 The `Knapsack Problem <https://en.wikipedia.org/wiki/Knapsack_problem>`_
 considers the problem of selecting a set of items whose weight is
