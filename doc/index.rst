@@ -32,6 +32,7 @@ Column-wise   YES           NO
    :caption: Contents:
 
    knapsack
+   sodacan
    gettingstarted
 
 
