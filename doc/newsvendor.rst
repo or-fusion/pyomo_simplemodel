@@ -1,6 +1,22 @@
-================================
-Flat vs Block Model Formulations
-================================
+===============================================
+Unstructured, Structured and Block Formulations
+===============================================
+
+This section illustrates differences between SimpleModel, PuLP and
+regular Pyomo models on a problem with more complex structure.  The
+**newsvendor problem** is used to illustrate three different modeling
+representations that are supported by these modeling tools:
+
+unstructured
+  The model stores a *list* of objectives and constraints expressions.
+
+structured
+  The model stores named objectives and constraints. Each of these named
+  components *map* index values to expressions.
+
+hierarchical
+  The model stores named *block* components, each of which stores
+  named components, including variables, objectives and constraints.
 
 -------------------
 Newsvendor Example
@@ -47,60 +63,113 @@ total cost over these scenarios:
 .. math::
    :nowrap:
 
-    \begin{array}{lll}
-        \min_{x,y_1,\ldots,y_k} & p_k y_k & \\
-        \textrm{s.t.} & y_k \geq (c-b)x + b d_k & k = 1,\ldots,K\\
-                      & y_k \geq (c+h)x - h d_k & k = 1,\ldots,K\\
+    \begin{array}{llll}
+        \min_{x,y_1,\ldots,y_K} & p_k y_k & & \\
+        \textrm{s.t.} & y_k \geq (c-b)x + b d_k & k = 1,\ldots,K & \textit{# demand is greater}\\
+                      & y_k \geq (c+h)x - h d_k & k = 1,\ldots,K & \textit{# demand is less}\\
                       & x \geq 0
     \end{array}
 
-This is a linear integer problem, so it can be formulated with
-SimpleModel, PuLP and Pyomo.  Below, we show formulations for
-SimpleModel and Pyomo.  In particular, the Pyomo formulation
-illustrates the use of the **Block** component to structure the
-model representation in a modular manner.
+This is a linear problem, so it can be formulated with
+SimpleModel, PuLP and Pyomo.
+
+Since the two constraints are indexed from :math:`1, \ldots, K`, we can
+group them together into a single block, which itself is indexed
+from :math:`1, \ldots, K`.
+
+.. math::
+   :nowrap:
+
+    \begin{array}{lll}
+        \min_{x,y_1,\ldots,y_K} & p_k y_k & \\
+        \textrm{s.t.} & \left\{\begin{array}{l}
+                        y_k \geq (c-b)x + b d_k\\
+                        y_k \geq (c+h)x - h d_k\\
+                        \end{array}\right\} & k = 1,\ldots,K\\
+                      & x \geq 0
+    \end{array}
+
+Below, we show formulations for SimpleModel, PuLP, and Pyomo.  The
+SimpleModel and PuLP models illustrate *unstructured* representations.
+The first Pyomo formulation illustrates an *unstructured* representation,
+where constraints are stored in a list.  The second Pyomo formulation
+illustrates a *structured* representation, which corresponds to the
+first formulation above.  The final Pyomo formulation illustrates
+a *hierarchical* representation, using the **Block** component to
+structure the model representation in a modular manner.
 
 -----------------------
 SimpleModel Formulation
 -----------------------
 
-The following script creates and solves an integer program for the newsvendor problem using SimpleModel:
+The following script creates and solves a linear program for the newsvendor problem using SimpleModel:
 
 .. literalinclude:: ../examples/newsvendor.py
    :language: python
    :linenos:
 
-There are two key things to note about this model.  First, it is
-`flat`: the model simply consists of a list of constraints.  Second,
-the ``y`` variable is indexed to represent the total cost for the
-different scenarios.
+There are two key things to note about this model.  First, the model
+simply consists of a list of constraints.  Second, the ``y`` variable
+is indexed to represent the total cost for the different scenarios.
+
+----------------
+PuLP Formulation
+----------------
+
+The following script creates and solves a linear program for the newsvendor problem using PuLP:
+
+.. literalinclude:: ../examples/newsvendor-pulp.py
+   :language: python
+   :linenos:
+
+As with the SimpleModel formulation, the model consists of a list
+of constraints, and the ``y`` variable is indexed.
 
 
------------------
-Pyomo Formulation
------------------
+------------------
+Pyomo Formulations
+------------------
 
-The following script creates and solves an integer program for the newsvendor problem using SimpleModel:
+The following script creates and solves a linear program for the
+newsvendor problem using Pyomo:
 
-.. literalinclude:: ../examples/newsvendor-pyomo.py
+.. literalinclude:: ../examples/newsvendor-pyomo1.py
 
-This script uses the ``Block`` component to create a hierarchical
-model representation.  A block is added for each index :math:`k =
-1,\ldots,K`, and each block contains a variable ``y``, and the
+This model uses the ``ConstraintList`` component to store a list of constraints, and the ``y`` variable
+is indexed.  Thus, this model provides an *unstructured* representation that is similar to models generated with SimpleModel and PuLP.
+
+The following script uses Pyomo to create and solve the newsvendor problem, using a *structured* representation:
+
+.. literalinclude:: ../examples/newsvendor-pyomo2.py
+
+The named constraint components ``greater`` and ``less`` define
+two groups of constraints for the model, each of which has the same
+mathematical form.  These named components provide a structured
+representation for these constraints.
+
+Finally, the following script uses Pyomo to create and solve this problem, using a *hierarchical* representation:
+
+.. literalinclude:: ../examples/newsvendor-pyomo3.py
+
+A block is added for each index :math:`k =
+1,\ldots,K`. Each block contains a variable ``y``, and the
 corresponding constraints that define the value of ``y``.
 
-Note that the ``Block`` component is indexed in this formulation
-while the ``y`` variable is indexed in the SimpleModel formulation.
-Block components allow Pyomo to support a modular modeling framework,
-where the data, variables and constraints in the block can be
-represented simply, and where the block itself is indexed.  There
+Note that the block component ``b`` is indexed in this formulation
+while the ``y`` variable is indexed in the other formulations above.
+Block components allow Pyomo to support a modular modeling framework
+where data, variables and constraints can be
+represented together for each index value.  There
 are several advantages of this approach:
 
 * This model structure is explicit, and it can be exploited by decomposition-based optimization solvers (e.g. the progressive hedging solver in Pyomo).
 
-* Extending and refining block models is simpler.  For example, if a multi-dimensional index was needed for this model, then ``y`` would need to be modified to reflect that.  In complex application with many variables and other components, the block structure helps coordinate and simplify this type of change.
+* Extending and refining models is simpler with blocks.  For example, if a multi-dimensional index was needed for this problem, then only the block ``b`` would need to be modified to reflect that.
 
 
+----------
+References
+----------
 
 .. [ShaPhi] A. Shapiro and A. Philpott.  *A Tutorial on Stochastic Programming*.  2007. `(weblink) <http://www2.isye.gatech.edu/people/faculty/Alex_Shapiro/TutorialSP.pdf>`_
 

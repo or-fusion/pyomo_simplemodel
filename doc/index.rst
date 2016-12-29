@@ -16,7 +16,7 @@ by `PuLP <https://github.com/coin-or/pulp>`_:
 
 .. sidebar:: SimpleModel vs Pyomo
 
-    SimpleModel is not meant to serve as a replacement for Pyomo, which supports a much richer set of modeling components than simple objectives and constraints. In particular, Pyomo's **Block** component supports the expression of hierarchical models with nested structure, while SimpleModel only supports a simple, non-hierarchical optimization problems.
+    SimpleModel is not meant to serve as a replacement for Pyomo, which supports a much richer set of modeling components than simple objectives and constraints. In particular, Pyomo's **Block** component supports the expression of structured and hierarchical models, while SimpleModel only supports simple, unstructured optimization problems.
 
 
 ============ ===== ============
@@ -26,6 +26,9 @@ LP/MILP       YES          YES
 NLP/MINLP      NO          YES
 Column-wise   YES           NO
 ============ ===== ============
+
+The following sections illustrate the differences between SimpleModel, PuLP and regular Pyomo models
+using simple optimization problems.
 
 .. toctree::
    :maxdepth: 2

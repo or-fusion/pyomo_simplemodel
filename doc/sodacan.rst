@@ -2,6 +2,10 @@
 Modeling Nonlinear Problems
 ===========================
 
+This section illustrates differences between SimpleModel and regular
+Pyomo models on a simple nonlinear problem.  PuLP is omitted from
+this comparison because it cannot represent nonlinear problems.
+
 ----------------
 Soda Can Example
 ----------------
@@ -47,11 +51,11 @@ be formulated and solved with SimpleModel and Pyomo.
 SimpleModel Formulation
 -----------------------
 
-The following script executes the following steps to create and solve the sodacan problem:
+The following script executes the following steps to create and solve the soda can problem:
 
 1. Import ``pyomo.contrib.simplemodel``
 2. Construct a ``SimpleModel`` class
-3. Declares variables, the objective and the constraint
+3. Declare variables, the objective and the constraint
 4. Perform optimization
 5. Summarize the optimal solution
 
@@ -62,7 +66,7 @@ The following script executes the following steps to create and solve the sodaca
 
 In this example, the model object ``m`` is used to manage the problem
 definition.  Decision variables are declared with the ``var()``
-method, objectives and constraints are added with the ``+=`` operator,
+method, the objective and constraint are added with the ``+=`` operator,
 and the ``solve()`` method is used to perform optimization.  After
 optimization, the solution is stored in the variable objects, and
 the objective value can be accessed with using the ``objective()``
@@ -73,7 +77,7 @@ method.
 Pyomo Formulation
 -----------------
 
-The following script executes the same steps as above to create and solve the soda cana problem using Pyomo:
+The following script executes the same steps as above to create and solve the soda can problem using Pyomo:
 
 .. literalinclude:: ../examples/sodacan-pyomo.py
 

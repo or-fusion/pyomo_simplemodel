@@ -2,6 +2,11 @@
 Comparing SimpleModel, PuLP and Pyomo
 =====================================
 
+This section illustrates differences between SimpleModel, PuLP
+and regular Pyomo models on the **knapsack problem**.  This problem 
+can be represented as a integer program, which all three of these modeling
+tools can easily represent.
+
 ----------------
 Knapsack Example
 ----------------
@@ -26,11 +31,13 @@ an integer program:
 .. math::
    :nowrap:
 
-   \begin{eqnarray}
+   \begin{equation*}
+   \begin{array}{ll}
       \max & \sum _{i=1}^{n} v_{i} x_{i} \\
       \textrm{s.t.} & \sum _{i=1}^{n} w_{i} x_{i}\leq W \\
-      \textrm{s.t.} & x_{i}\in \{0,1\} 
-   \end{eqnarray}
+                   & x_{i}\in \{0,1\} 
+   \end{array}
+   \end{equation*}
 
 The following sections illustrate how this optimization problem can be
 formulated with (1) SimpleModel, (2) PuLP, and (3) Pyomo.
@@ -43,7 +50,7 @@ The following script executes the following steps to create and solve a knapsack
 
 1. Import ``pyomo.contrib.simplemodel``
 2. Construct a ``SimpleModel`` class
-3. Declares variables, the objective and the constraint
+3. Declare variables, the objective and the constraint
 4. Perform optimization
 5. Summarize the optimal solution
 
@@ -54,7 +61,7 @@ The following script executes the following steps to create and solve a knapsack
 
 In this example, the model object ``m`` is used to manage the problem
 definition.  Decision variables are declared with the ``var()``
-method, objectives and constraints are added with the ``+=`` operator,
+method, the objective and constraint are added with the ``+=`` operator,
 and the ``solve()`` method is used to perform optimization.  After
 optimization, the solution is stored in the variable objects, and
 the objective value can be accessed with using the ``objective()``
