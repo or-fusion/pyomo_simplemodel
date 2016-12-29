@@ -40,6 +40,6 @@ install:
 #
 - which python
 - python --version
-- python setup.py install
+- python setup.py develop
 script:
 - nosetests --verbosity=3 -x . -v
