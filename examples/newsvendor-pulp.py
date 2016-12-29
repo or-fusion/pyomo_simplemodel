@@ -12,7 +12,7 @@ scenarios = range(1,6)
 M = LpProblem("Newsvendor")
 
 x = LpVariable('x', lowBound=0)
-y = LpVariable.dicts('y', scenarios, lowBound=0)
+y = LpVariable.dicts('y', scenarios)
 
 for i in scenarios:
   M += y[i] >= (c-b)*x + b*d[i]

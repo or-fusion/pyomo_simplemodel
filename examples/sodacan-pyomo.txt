@@ -1,0 +1,4 @@
+Status = optimal
+r = 3.837215
+h = 7.674430
+Objective = 277.545024

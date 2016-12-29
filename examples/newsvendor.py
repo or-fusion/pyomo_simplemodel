@@ -11,7 +11,7 @@ scenarios = range(1,6)
 
 m = SimpleModel()
 x = m.var('x', within=NonNegativeReals)
-y = m.var('y', scenarios, within=NonNegativeReals)
+y = m.var('y', scenarios)
 
 for i in scenarios:
   m += y[i] >= (c-b)*x + b*d[i]
