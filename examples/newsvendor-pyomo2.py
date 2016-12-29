@@ -1,4 +1,4 @@
-# newsvendor-pyomo.py
+# newsvendor-pyomo2.py
 
 from pyomo.environ import *
 
@@ -14,11 +14,11 @@ M.x = Var(within=NonNegativeReals)
 M.y = Var(scenarios)
 
 def greater_rule(M, i):
-  return M.y[i] >= (c+h)*M.x + h*d[i]
+  return M.y[i] >= (c-b)*M.x + b*d[i]
 M.greater = Constraint(scenarios, rule=greater_rule)
 
 def less_rule(M, i):
-  return M.y[i] >= (c-b)*M.x + b*d[i]
+  return M.y[i] >= (c+h)*M.x - h*d[i]
 M.less = Constraint(scenarios, rule=less_rule)
 
 def o_rule(M):

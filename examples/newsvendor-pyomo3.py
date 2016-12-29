@@ -1,4 +1,4 @@
-# newsvendor-pyomo.py
+# newsvendor-pyomo3.py
 
 from pyomo.environ import *
 
@@ -14,8 +14,8 @@ M.x = Var(within=NonNegativeReals)
 
 def b_rule(B, i):
   B.y = Var()
-  B.l = Constraint(expr=B.y >= (c-b)*M.x + b*d[i])
-  B.u = Constraint(expr=B.y >= (c+h)*M.x + h*d[i])
+  B.greater = Constraint(expr=B.y >= (c-b)*M.x + b*d[i])
+  B.less    = Constraint(expr=B.y >= (c+h)*M.x - h*d[i])
   return B
 M.b = Block(scenarios, rule=b_rule)
 

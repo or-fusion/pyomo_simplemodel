@@ -1,4 +1,4 @@
-# newsvendor-pyomo.py
+# newsvendor-pulp.py
 
 from pulp import *
 
@@ -15,8 +15,8 @@ x = LpVariable('x', lowBound=0)
 y = LpVariable.dicts('y', scenarios, lowBound=0)
 
 for i in scenarios:
-  M += y[i] >= (c+h)*x + h*d[i]
   M += y[i] >= (c-b)*x + b*d[i]
+  M += y[i] >= (c+h)*x - h*d[i]
 
 M += sum(y[i] for i in scenarios)/5.0
 

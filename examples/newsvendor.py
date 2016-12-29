@@ -15,7 +15,7 @@ y = m.var('y', scenarios, within=NonNegativeReals)
 
 for i in scenarios:
   m += y[i] >= (c-b)*x + b*d[i]
-  m += y[i] >= (c+h)*x + h*d[i]
+  m += y[i] >= (c+h)*x - h*d[i]
 
 m += sum(y[i] for i in scenarios)/5.0
 

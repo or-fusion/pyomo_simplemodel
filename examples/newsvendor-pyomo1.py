@@ -1,4 +1,4 @@
-# newsvendor-pyomo.py
+# newsvendor-pyomo1.py
 
 from pyomo.environ import *
 
@@ -15,8 +15,8 @@ M.y = Var(scenarios)
 
 M.c = ConstraintList()
 for i in scenarios:
-  M.c.add( M.y[i] >= (c+h)*M.x + h*d[i] )
   M.c.add( M.y[i] >= (c-b)*M.x + b*d[i] )
+  M.c.add( M.y[i] >= (c+h)*M.x - h*d[i] )
 
 M.o = Objective(expr=sum(M.y[i] for i in scenarios)/5.0)
 
