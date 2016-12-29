@@ -42,4 +42,4 @@ install:
 - python --version
 - python setup.py install
 script:
-- nosetests --verbosity=3 -x .
+- nosetests --verbosity=3 -x . -v
