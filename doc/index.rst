@@ -14,11 +14,6 @@ that illustrates how Pyomo can be used in a simple, less object-oriented
 manner. Specifically, this class mimics the modeling style supported
 by `PuLP <https://github.com/coin-or/pulp>`_:
 
-.. sidebar:: SimpleModel vs Pyomo
-
-    SimpleModel is not meant to serve as a replacement for Pyomo, which supports a much richer set of modeling components than simple objectives and constraints. In particular, Pyomo's **Block** component supports the expression of structured and hierarchical models, while SimpleModel only supports simple, unstructured optimization problems.
-
-
 ============ ===== ============
 Feature      PuLP  SimpleModel
 ============ ===== ============
@@ -26,6 +21,12 @@ LP/MILP       YES          YES
 NLP/MINLP      NO          YES
 Column-wise   YES           NO
 ============ ===== ============
+
+.. sidebar:: SimpleModel vs Pyomo
+
+    SimpleModel is not meant to serve as a replacement for Pyomo. While SimpleModel only represents problems with a simple, unstructured representation, Pyomo's modeling components support structured, hierarchical models that are suitable for complex applications.
+
+
 
 The following sections illustrate similarities and differences
 between SimpleModel, PuLP and regular Pyomo models.  First, the
@@ -55,3 +56,12 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Acknowledgements
+----------------
+This software was supported in part by Sandia National Laboratories.
+Sandia National Laboratories is a multi-program laboratory
+managed and operated by Sandia Corporation, a wholly owned subsidiary
+of Lockheed Martin Corporation, for the U.S. Department of Energy's
+National Nuclear Security Administration under contract DE-AC04-94AL85000.
+

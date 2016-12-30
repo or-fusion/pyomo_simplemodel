@@ -57,7 +57,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'pyomocontrib_simplemodel'
-copyright = u'2016, pyomocontrib_simplemodel'
+copyright = u'2017, Sandia National Laboratories'
 author = u'pyomocontrib_simplemodel'
 
 # The version info for the project you're documenting, acts as replacement for
