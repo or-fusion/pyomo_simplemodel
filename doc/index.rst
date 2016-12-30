@@ -27,8 +27,16 @@ NLP/MINLP      NO          YES
 Column-wise   YES           NO
 ============ ===== ============
 
-The following sections illustrate the differences between SimpleModel, PuLP and regular Pyomo models
-using simple optimization problems.
+The following sections illustrate similarities and differences
+between SimpleModel, PuLP and regular Pyomo models.  First, the
+knapsack problem is used to illustrate that these packages can be
+used in a similar manner on simple applications.  Next, the soda
+can problem illustrates that SimpleModel can represent nonlinear
+problems that cannot be modeled with PuLP.  Finally, the newvendor
+problem is used to illustrate three different modeling representations:
+unstructured models, structured models and hierarchical models.
+SimpleModel and PuLP have unstructured models, while Pyomo supports
+all three modeling representations.
 
 .. toctree::
    :maxdepth: 2
