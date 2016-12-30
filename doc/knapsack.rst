@@ -8,7 +8,7 @@ can be represented as a integer program, which all three of these modeling
 tools can easily represent.
 
 ----------------
-Knapsack Example
+Knapsack Problem
 ----------------
 
 The `Knapsack Problem <https://en.wikipedia.org/wiki/Knapsack_problem>`_

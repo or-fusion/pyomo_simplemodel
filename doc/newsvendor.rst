@@ -18,9 +18,9 @@ hierarchical
   The model stores named *block* components, each of which stores
   named components, including variables, objectives and constraints.
 
--------------------
-Newsvendor Example
--------------------
+------------------
+Newsvendor Problem
+------------------
 
 The `Newsvendor Problem <https://en.wikipedia.org/wiki/Newsvendor_model>`_ 
 considers the problem of determining optimal inventory levels.  

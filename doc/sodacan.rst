@@ -7,7 +7,7 @@ Pyomo models on a simple nonlinear problem.  PuLP is omitted from
 this comparison because it cannot represent nonlinear problems.
 
 ----------------
-Soda Can Example
+Soda Can Problem
 ----------------
 
 Finding the optimal dimensions of a soda can is a simple nonlinear
@@ -36,12 +36,14 @@ Thus, we have the following optimization representation for this problem:
 .. math::
    :nowrap:
 
-    \begin{eqnarray}
+    \begin{equation*}
+    \begin{array}{ll}
         \min & 2 \pi r (r+h)\\
         \textrm{s.t. } & \pi r^2 h = 355\\
         & r \geq 0\\
         & h \geq 0
-    \end{eqnarray}
+    \end{array}
+    \end{equation*}
 
 This is a nonlinear problem, so it cannot be formulated with PuLP.
 The following sections illustrate how this optimization problem can
