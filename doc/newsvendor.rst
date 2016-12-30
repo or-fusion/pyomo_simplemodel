@@ -46,8 +46,6 @@ the demand is known.  The deterministic formulation corresponds to
 a single scenario taken with probability one:
 
 .. math::
-   :nowrap:
-
     \begin{array}{ll}
         \min_{x,y} & y\\
         \textrm{s.t.} & y \geq (c-b)x + b d\\
@@ -61,14 +59,16 @@ Then the following formulation minimizes the expected value of the
 total cost over these scenarios:
 
 .. math::
-   :nowrap:
+    :nowrap:
 
+    \begin{equation*}
     \begin{array}{llll}
         \min_{x,y_1,\ldots,y_K} & p_k y_k & & \\
-        \textrm{s.t.} & y_k \geq (c-b)x + b d_k & k = 1,\ldots,K & \textit{# demand is greater}\\
-                      & y_k \geq (c+h)x - h d_k & k = 1,\ldots,K & \textit{# demand is less}\\
+        \textrm{s.t.} & y_k \geq (c-b)x + b d_k & k = 1,\ldots,K & \textit{(Demand is greater)}\\
+                      & y_k \geq (c+h)x - h d_k & k = 1,\ldots,K & \textit{(Demand is less)}\\
                       & x \geq 0
     \end{array}
+    \end{equation*}
 
 This is a linear problem, so it can be formulated with
 SimpleModel, PuLP and Pyomo.
@@ -78,8 +78,6 @@ group them together into a single block, which itself is indexed
 from :math:`1, \ldots, K`.
 
 .. math::
-   :nowrap:
-
     \begin{array}{lll}
         \min_{x,y_1,\ldots,y_K} & p_k y_k & \\
         \textrm{s.t.} & \left\{\begin{array}{l}
@@ -166,10 +164,6 @@ are several advantages of this approach:
 
 * Extending and refining models is simpler with blocks.  For example, if a multi-dimensional index was needed for this problem, then only the block ``b`` would need to be modified to reflect that.
 
-
-----------
-References
-----------
 
 .. [ShaPhi] A. Shapiro and A. Philpott.  *A Tutorial on Stochastic Programming*.  2007. `(weblink) <http://www2.isye.gatech.edu/people/faculty/Alex_Shapiro/TutorialSP.pdf>`_
 
