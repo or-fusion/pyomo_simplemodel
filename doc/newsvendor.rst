@@ -37,9 +37,11 @@ incurred for unused product.
 The objective is to minimize the `total cost`: :math:`\max\left\{
 (c-b)x+bd, (c+h)x-hd\right\}`.  For example, suppose we have
 :math:`c=1`, :math:`b=1.5`, :math:`h=0.1`, and :math:`d=50`.
-Then the total following figure illustrates the total cost:
+Then the following figure illustrates the total cost:
 
-.. image: figs/newsvendor_totalcost.png
+.. image:: figs/newsvendor_totalcost.png
+    :width: 500px
+    :align: center
 
 In general, the ordering decision is made before a realization of
 the demand is known.  The deterministic formulation corresponds to
@@ -63,7 +65,7 @@ total cost over these scenarios:
 
     \begin{equation*}
     \begin{array}{llll}
-        \min_{x,y_1,\ldots,y_K} & p_k y_k & & \\
+        \min_{x,y_1,\ldots,y_K} & \sum_k p_k y_k & & \\
         \textrm{s.t.} & y_k \geq (c-b)x + b d_k & k = 1,\ldots,K & \textit{(Demand is greater)}\\
                       & y_k \geq (c+h)x - h d_k & k = 1,\ldots,K & \textit{(Demand is less)}\\
                       & x \geq 0
@@ -79,7 +81,7 @@ from :math:`1, \ldots, K`.
 
 .. math::
     \begin{array}{lll}
-        \min_{x,y_1,\ldots,y_K} & p_k y_k & \\
+        \min_{x,y_1,\ldots,y_K} & \sum_k p_k y_k & \\
         \textrm{s.t.} & \left\{\begin{array}{l}
                         y_k \geq (c-b)x + b d_k\\
                         y_k \geq (c+h)x - h d_k\\
