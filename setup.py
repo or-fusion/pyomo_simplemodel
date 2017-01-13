@@ -1,5 +1,5 @@
 """
-Script to generate the installer for pyomo.aux.simplemodel
+Script to generate the installer for pyomo.contrib.simplemodel
 """
 
 import sys

@@ -1,6 +1,5 @@
 # Example adapted from PuLP file test1.py
 
-#from pyomo.aux.simplemodel import *
 from pyomo.contrib.simplemodel import *
 
 # A new problem
