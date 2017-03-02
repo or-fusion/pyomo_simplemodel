@@ -26,8 +26,6 @@ Column-wise   YES           NO
 
     SimpleModel is not meant to serve as a replacement for Pyomo. While SimpleModel only represents problems with a simple, unstructured representation, Pyomo's modeling components support structured, hierarchical models that are suitable for complex applications.
 
-
-
 The following sections illustrate similarities and differences
 between SimpleModel, PuLP and regular Pyomo models.  First, the
 knapsack problem is used to illustrate that these packages can be
