@@ -3,49 +3,101 @@ matrix:
   include:
   - python: '2.7'
     env:                             CATEGORY="nightly"  EXTRAS="yes"
-  - python: '3.4'
-    env:                             CATEGORY="nightly"  EXTRAS="yes"
   - python: '3.5'
     env:                             CATEGORY="nightly"  EXTRAS="yes"
+  - python: '3.6'
+    env:                             CATEGORY="nightly"  EXTRAS="yes"
 install:
-- sudo apt-get update
-#
-# Setup miniconda and activate the testenv environment
-#
-- if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
-     wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
-  else
-     wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-  fi
-- bash miniconda.sh -b -p $HOME/miniconda
-- export PATH="$HOME/miniconda/bin:$PATH"
-- hash -r
-- conda create -f -y -n testenv python=${TRAVIS_PYTHON_VERSION}
-- source activate testenv
-#
-# Install supporting packages
-#
-- if [ -n "${EXTRAS}" ]; then conda install -y --channel conda-forge pyomo.extras; fi
-- if [ "${TRAVIS_PYTHON_VERSION}" = "2.6" ]; then pip install ordereddict; fi
-- conda install -y --channel conda-forge glpk
-- conda install -y --channel cachemeorg ipopt_bin
-- pip install coverage
-#
-# Install PyUtilib and Pyomo (master branches)
-#
-- git clone https://github.com/PyUtilib/pyutilib.git
-- cd pyutilib
-- python setup.py develop
-- cd ..
-- git clone https://github.com/Pyomo/pyomo.git
-- cd pyomo
-- python setup.py develop
-- cd ..
-#
-# Install this package
-#
-- which python
-- python --version
-- python setup.py develop
+  - sudo apt-get update --quiet
+  - sudo apt-get install gfortran
+  #
+  # Setup miniconda and activate the testenv environment
+  #
+  - if [[ "${TRAVIS_PYTHON_VERSION:0:1}" == "2" ]]; then
+       wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+    else
+       wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    fi
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  #
+  # Update conda, then force it to NOT update itself again
+  #
+  - conda config --set always_yes yes
+  - conda update -q -y -c anaconda conda
+  - conda config --set auto_update_conda false
+  #
+  - conda create -f -q -y -n testenv python=${TRAVIS_PYTHON_VERSION}
+  - source activate testenv
+  #
+  # Install supporting packages
+  #
+  - conda install -q -y -c conda-forge --no-update-dependencies setuptools pip
+  #
+  - which python
+  - python --version
+  - which pip
+  - pip --version
+  #
+  - if [ "${TRAVIS_PYTHON_VERSION}" == "2.6" ]; then pip install 'cryptography<2.1.1'; fi
+  - if [ "${TRAVIS_PYTHON_VERSION}" == "2.6" ]; then pip install 'pyOpenSSL<17.5'; fi
+  - if [ "${TRAVIS_PYTHON_VERSION}" == "2.6" ]; then pip install urllib3; fi
+  - if [ "${TRAVIS_PYTHON_VERSION}" == "2.6" ]; then pip install ordereddict; fi
+  #
+  - pip install coverage
+  - pip install codecov
+  - if [ -n "${YAML}" ]; then
+       pip install --quiet pyyaml;
+    fi
+  #- if [ -n "${PYRO}" ]; then
+  #     pip install --quiet $PYRO;
+  #  fi
+  #- pip install --quiet xlrd
+  #- pip install --quiet openpyxl
+  #- pip install sphinx_rtd_theme
+  #- conda install -q -y -c anaconda pandas networkx
+
+  #- if [ "${TRAVIS_PYTHON_VERSION}" != "2.6" -a -n "${EXTRAS}" ]; then
+  #     conda install -q -y -c anaconda scipy;
+  #  fi
+
+  #
+  # Install Pyomo extras
+  #
+  - if [ -n "${EXTRAS}" ]; then
+       conda install -q -y -c conda-forge --no-update-dependencies pyomo.extras;
+    fi
+
+  #
+  # Install freely available solvers
+  #
+  - conda install -q -y -c conda-forge --no-update-dependencies glpk
+  - glpsol -v
+  - conda install -q -y -c conda-forge --no-update-dependencies ipopt
+  - ipopt -v
+
+  #
+  # Clone but don't install pyomo-model-libraries
+  #
+  #- git clone --quiet https://github.com/Pyomo/pyomo-model-libraries.git
+  #
+  # Install PyUtilib (master branch)
+  #
+  - pip install --quiet git+https://github.com/PyUtilib/pyutilib
+  #
+  # Install this package
+  #
+  - python setup.py develop
+  #
+  # Verify that the Python interpreter hasn't changed (occasionally conda
+  # installers will change the installed Python!!)
+  #
+  - which python
+  - python --version
+  - if [ `python --version |& grep "Python ${TRAVIS_PYTHON_VERSION}" | wc -l` -eq 0 ]; then
+       exit 1;
+    fi
+
 script:
-- nosetests -x .
+  - nosetests -x .
