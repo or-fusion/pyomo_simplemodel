@@ -2,6 +2,12 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/urr88klp2dxsr5bt?svg=true)](https://ci.appveyor.com/project/WilliamHart/pyomocontrib-simplemodel)
 [![Documentation Status](https://readthedocs.org/projects/pyomocontrib-simplemodel/badge/?version=latest)](http://pyomocontrib-simplemodel.readthedocs.org/en/latest/)
 
+[![GitHub contributors](https://img.shields.io/github/contributors/pyomo/pyomocontrib_simplemodel.svg)](https://github.com/pyomo/pyomocontrib_simplemodel/graphs/contributors)
+[![Merged PRs](https://img.shields.io/github/issues-pr-closed-raw/pyomo/pyomocontrib_simplemodel.svg?label=merged+PRs)](https://github.com/pyomo/pyomocontrib_simplemodel/pulls?q=is:pr+is:merged)
+[![Issue stats](http://isitmaintained.com/badge/resolution/pyomo/pyomocontrib_simplemodel.svg)](http://isitmaintained.com/project/pyomo/pyomocontrib_simplemodel)
+[![Research software impact](http://depsy.org/api/package/pypi/pyomocontrib_simplemodel/badge.svg)](http://depsy.org/package/python/pyomocontrib_simplemodel)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+
 ## Overview
 
 ### Description 
