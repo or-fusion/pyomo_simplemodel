@@ -5,7 +5,6 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/pyomo/pyomocontrib_simplemodel.svg)](https://github.com/pyomo/pyomocontrib_simplemodel/graphs/contributors)
 [![Merged PRs](https://img.shields.io/github/issues-pr-closed-raw/pyomo/pyomocontrib_simplemodel.svg?label=merged+PRs)](https://github.com/pyomo/pyomocontrib_simplemodel/pulls?q=is:pr+is:merged)
 [![Issue stats](http://isitmaintained.com/badge/resolution/pyomo/pyomocontrib_simplemodel.svg)](http://isitmaintained.com/project/pyomo/pyomocontrib_simplemodel)
-[![Research software impact](http://depsy.org/api/package/pypi/pyomocontrib_simplemodel/badge.svg)](http://depsy.org/package/python/pyomocontrib_simplemodel)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 ## Overview
@@ -27,6 +26,30 @@ Specifically, this class mimics the modeling style supported by
 [See the online documentation for further details.](http://pyomocontrib-simplemodel.readthedocs.org/en/latest/)
 
 This software is available under the BSD License.
+
+### Installation
+
+#### PyPI [![PyPI](https://img.shields.io/pypi/v/pyomocontrib_simplemodel.svg?maxAge=2592000)]()
+<!---
+# PyPI download stats appear to be broken
+[![PyPI](https://img.shields.io/pypi/dm/pyomocontrib_simplemodel.svg?maxAge=2592000)]()
+--->
+
+    pip install pyomocontrib_simplemodel
+    
+<!---
+#### BinStar [![Binstar Badge](https://anaconda.org/conda-forge/pyomocontrib_simplemodel/badges/version.svg)](https://anaconda.org/conda-forge/pyomocontrib_simplemodel) [![Binstar Badge](https://anaconda.org/conda-forge/pyomocontrib_simplemodel/badges/downloads.svg)](https://anaconda.org/conda-forge/pyomocontrib_simplemodel)
+
+    conda install -c https://conda.anaconda.org/conda-forge pyomocontrib_simplemodel
+--->
+
+### Getting Help
+
+* [Ask a Pyomo Question on StackExchange](https://stackoverflow.com/questions/ask?tags=pyomo)
+* [Pyomo Forum](https://groups.google.com/forum/?hl=en#!forum/pyomo-forum)
+* [Add a Ticket](https://github.com/Pyomo/pyomocontrib_simplemodel/issues/new)
+* [Find a Ticket](https://github.com/Pyomo/pyomocontrib_simplemodel/issues) and **Vote On It**!
+
 
 ### Developers
 
