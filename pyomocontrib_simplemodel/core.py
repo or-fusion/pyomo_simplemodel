@@ -129,7 +129,7 @@ class SimpleModel(object):
             1 <= x + 3y
             1 == x + 3y
             3y >= 2x
-            0 <= tan(x) <= 1
+            inequality(0, tan(x), 1)
        
         Objective expressions are not equations or inequalities, for example::
 
