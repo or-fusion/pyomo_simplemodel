@@ -86,6 +86,10 @@ install:
   #
   - pip install --quiet git+https://github.com/PyUtilib/pyutilib
   #
+  # Install Pyomo (master branch)
+  #
+  - pip install --quiet git+https://github.com/Pyomo/pyomo
+  #
   # Install this package
   #
   - python setup.py develop
