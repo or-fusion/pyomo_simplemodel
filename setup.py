@@ -29,14 +29,14 @@ def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
 requires = [
-    'Pyomo>=5.6',
+    'Pyomo>=5.6.2.dev0',
     ]
 
 from setuptools import setup
 packages = _find_packages('pyomocontrib_simplemodel')
 
 setup(name='pyomocontrib_simplemodel',
-      version='1.0.2',
+      version='1.1.dev0',
       maintainer='William E. Hart',
       maintainer_email='wehart@sandia.gov',
       url='http://pyomo.org',
