@@ -7,10 +7,10 @@ matrix:
     env:                             CATEGORY="nightly"  EXTRAS="yes"
   - python: '3.6'
     env:                             CATEGORY="nightly"  EXTRAS="yes"
-  - python: '3.7'
-    env:                             CATEGORY="nightly"  EXTRAS="yes"
-    dist: xenial
-    sudo: yes
+  #- python: '3.7'
+  #  env:                             CATEGORY="nightly"  EXTRAS="yes"
+  #  dist: xenial
+  #  sudo: yes
 install:
   - sudo apt-get update --quiet
   - sudo apt-get install gfortran
