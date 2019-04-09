@@ -37,7 +37,7 @@ install:
   #
   # Install supporting packages
   #
-  - conda install -q -y -c conda-forge --no-update-dependencies setuptools pip
+  - conda install -q -y -c conda-forge --no-deps setuptools pip
   #
   - which python
   - python --version
