@@ -70,15 +70,15 @@ install:
   # Install Pyomo extras
   #
   - if [ -n "${EXTRAS}" ]; then
-       conda install -q -y -c conda-forge --no-update-dependencies pyomo.extras;
+       conda install -q -y -c conda-forge --no-deps pyomo.extras;
     fi
 
   #
   # Install freely available solvers
   #
-  - conda install -q -y -c conda-forge --no-update-dependencies glpk
+  - conda install -q -y -c conda-forge --no-deps glpk
   - glpsol -v
-  - conda install -q -y -c conda-forge --no-update-dependencies ipopt
+  - conda install -q -y -c conda-forge --no-deps ipopt
   - ipopt -v
 
   #
