@@ -76,9 +76,9 @@ install:
   #
   # Install freely available solvers
   #
-  - conda install -q -y -c conda-forge --no-deps glpk
+  - conda install -q -y -c conda-forge glpk
   - glpsol -v
-  - conda install -q -y -c conda-forge --no-deps ipopt
+  - conda install -q -y -c conda-forge ipopt
   - ipopt -v
 
   #
