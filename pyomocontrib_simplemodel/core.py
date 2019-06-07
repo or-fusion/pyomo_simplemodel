@@ -144,7 +144,7 @@ class SimpleModel(object):
         """
         if expr is True:
             self
-        elif expr.is_relational():
+        elif hasattr(expr, 'is_relational') and expr.is_relational():
             self.model.c.add( expr )
         else:
             self.model.o.add( expr )
