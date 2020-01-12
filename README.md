@@ -6,9 +6,9 @@
 [![Pyomo Checks - PyPI](https://github.com/pyomocommunity/pyomo_simplemodel/workflows/pyomo-checks/pypi/badge.svg)](https://github.com/pyomocommunity/pyomo_simplemodel/actions)
 [![Pyomo Checks - Conda](https://github.com/pyomocommunity/pyomo_simplemodel/workflows/pyomo-checks/conda/badge.svg)](https://github.com/pyomocommunity/pyomo_simplemodel/actions)
 
-[![GitHub contributors](https://img.shields.io/github/contributors/pyomo/pyomo_simplemodel.svg)](https://github.com/pyomo/pyomo_simplemodel/graphs/contributors)
-[![Merged PRs](https://img.shields.io/github/issues-pr-closed-raw/pyomo/pyomo_simplemodel.svg?label=merged+PRs)](https://github.com/pyomo/pyomo_simplemodel/pulls?q=is:pr+is:merged)
-[![Issue stats](http://isitmaintained.com/badge/resolution/pyomo/pyomo_simplemodel.svg)](http://isitmaintained.com/project/pyomo/pyomo_simplemodel)
+[![GitHub contributors](https://img.shields.io/github/contributors/pyomocommunity/pyomo_simplemodel.svg)](https://github.com/pyomocommunity/pyomo_simplemodel/graphs/contributors)
+[![Merged PRs](https://img.shields.io/github/issues-pr-closed-raw/pyomocommunity/pyomo_simplemodel.svg?label=merged+PRs)](https://github.com/pyomocommunity/pyomo_simplemodel/pulls?q=is:pr+is:merged)
+[![Issue stats](http://isitmaintained.com/badge/resolution/pyomocommunity/pyomo_simplemodel.svg)](http://isitmaintained.com/project/pyomocommunity/pyomo_simplemodel)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 ## Overview
