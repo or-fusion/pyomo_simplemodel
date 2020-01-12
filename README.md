@@ -1,10 +1,8 @@
 
-[![Actions Status](https://github.com/pyomocommunity/pyomo_simplemodel/workflows/continuous-integration/github/pr/linux/badge.svg)](https://github. com/pyomocommunity/pyomo_simplemodel/actions)
-[![Build Status](https://travis-ci.org/Pyomo/pyomo_simplemodel.svg?branch=master)](https://travis-ci.org/Pyomo/pyomo_simplemodel)
-[![Build status](https://ci.appveyor.com/api/projects/status/urr88klp2dxsr5bt?svg=true)](https://ci.appveyor.com/project/WilliamHart/pyomo-simplemodel)
+[![Actions Status](https://github.com/pyomocommunity/pyomo_simplemodel/workflows/continuous-integration/github/pr/linux/badge.svg)](https://github.com/pyomocommunity/pyomo_simplemodel/actions)
 [![Documentation Status](https://readthedocs.org/projects/pyomo-simplemodel/badge/?version=latest)](http://pyomo-simplemodel.readthedocs.org/en/latest/)
 
-[![Pyomo Checks - GitHub Master](https://github.com/pyomocommunity/pyomo_simplemodel/workflows/pyomo-checks/master/badge.svg)](https://github.com/  pyomocommunity/pyomo_simplemodel/actions)
+[![Pyomo Checks - GitHub Master](https://github.com/pyomocommunity/pyomo_simplemodel/workflows/pyomo-checks/master/badge.svg)](https://github.com/pyomocommunity/pyomo_simplemodel/actions)
 [![Pyomo Checks - PyPI](https://github.com/pyomocommunity/pyomo_simplemodel/workflows/pyomo-checks/pypi/badge.svg)](https://github.com/pyomocommunity/pyomo_simplemodel/actions)
 [![Pyomo Checks - Conda](https://github.com/pyomocommunity/pyomo_simplemodel/workflows/pyomo-checks/conda/badge.svg)](https://github.com/pyomocommunity/pyomo_simplemodel/actions)
 
