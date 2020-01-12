@@ -174,6 +174,11 @@ class SimpleModel(object):
         solver objects.
         """
         solver = SolverFactory(name)
+
+        if len(self.model.o) == 0:
+            # No objectives defined, so add a dummy objective
+            self.model.o.add( 1 )
+
         return solver.solve(self.model, *args, **kwargs)
    
     def pprint(self):
