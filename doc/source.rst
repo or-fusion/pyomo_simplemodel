@@ -6,7 +6,7 @@ Source Documentation
 SimpleModel
 -----------
 
-.. py:currentmodule:: pyomocontrib_simplemodel
+.. py:currentmodule:: pyomo_simplemodel
 
 .. autoclass:: SimpleModel
     :members:

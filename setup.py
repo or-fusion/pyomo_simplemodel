@@ -1,5 +1,5 @@
 """
-Script to generate the installer for pyomo.contrib.simplemodel
+Script to generate the installer for pyomo_simplemodel
 """
 
 import sys
@@ -33,9 +33,9 @@ requires = [
     ]
 
 from setuptools import setup
-packages = _find_packages('pyomocontrib_simplemodel')
+packages = _find_packages('pyomo_simplemodel')
 
-setup(name='pyomocontrib_simplemodel',
+setup(name='pyomo_simplemodel',
       version='1.1.dev0',
       maintainer='William E. Hart',
       maintainer_email='wehart@sandia.gov',

@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=pyomocontrib_simplemodel
+set SPHINXPROJ=pyomo_simplemodel
 
 if "%1" == "" goto help
 

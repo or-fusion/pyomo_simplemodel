@@ -1,6 +1,6 @@
 # newsvendor.py
 
-from pyomo.contrib.simplemodel import *
+from pyomo_simplemodel import *
 
 c=1.0
 b=1.5

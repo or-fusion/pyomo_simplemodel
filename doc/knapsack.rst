@@ -48,7 +48,7 @@ SimpleModel Formulation
 
 The following script executes the following steps to create and solve a knapsack problem:
 
-1. Import ``pyomo.contrib.simplemodel``
+1. Import ``pyomo_simplemodel``
 2. Construct a ``SimpleModel`` class
 3. Declare variables, the objective and the constraint
 4. Perform optimization

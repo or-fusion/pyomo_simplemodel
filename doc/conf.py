@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# pyomocontrib_simplemodel documentation build configuration file, created by
+# pyomo_simplemodel documentation build configuration file, created by
 # sphinx-quickstart on Mon Dec 12 16:08:36 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -56,9 +56,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'pyomocontrib_simplemodel'
+project = u'pyomo_simplemodel'
 copyright = u'2017, Sandia National Laboratories'
-author = u'pyomocontrib_simplemodel'
+author = u'pyomo_simplemodel'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -118,7 +118,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pyomocontrib_simplemodeldoc'
+htmlhelp_basename = 'pyomo_simplemodeldoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -145,8 +145,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'pyomocontrib_simplemodel.tex', 'pyomocontrib\\_simplemodel Documentation',
-     'pyomocontrib\\_simplemodel', 'manual'),
+    (master_doc, 'pyomo_simplemodel.tex', 'pyomo\\_simplemodel Documentation',
+     'pyomo\\_simplemodel', 'manual'),
 ]
 
 
@@ -155,7 +155,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'pyomocontrib_simplemodel', 'pyomocontrib_simplemodel Documentation',
+    (master_doc, 'pyomo_simplemodel', 'pyomo_simplemodel Documentation',
      [author], 1)
 ]
 
@@ -166,8 +166,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'pyomocontrib_simplemodel', 'pyomocontrib_simplemodel Documentation',
-     author, 'pyomocontrib_simplemodel', 'One line description of project.',
+    (master_doc, 'pyomo_simplemodel', 'pyomo_simplemodel Documentation',
+     author, 'pyomo_simplemodel', 'One line description of project.',
      'Miscellaneous'),
 ]
 

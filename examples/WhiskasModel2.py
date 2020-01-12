@@ -1,7 +1,7 @@
 # The Full Whiskas Model Python Formulation adapted from PuLP
 # Authors: Antony Phillips, Dr Stuart Mitchell  2007
 
-from pyomo.contrib.simplemodel import *
+from pyomo_simplemodel import *
 
 # Creates a list of the Ingredients
 Ingredients = ['CHICKEN', 'BEEF', 'MUTTON', 'RICE', 'WHEAT', 'GEL']

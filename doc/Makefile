@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = pyomocontrib_simplemodel
+SPHINXPROJ    = pyomo_simplemodel
 SOURCEDIR     = .
 BUILDDIR      = _build
 

@@ -2,7 +2,7 @@
 # adapted from the CPLEX file format reference manual.
 # Optimal objective function value is 60. solution is x=10, y=0.
 
-from pyomo.contrib.simplemodel import *
+from pyomo_simplemodel import *
 
 m = SimpleModel()
 

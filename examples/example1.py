@@ -1,6 +1,6 @@
 # Example adapted from PuLP file test1.py
 
-from pyomo.contrib.simplemodel import *
+from pyomo_simplemodel import *
 
 # A new problem
 prob = SimpleModel()

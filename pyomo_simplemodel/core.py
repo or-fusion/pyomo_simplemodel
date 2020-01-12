@@ -24,7 +24,7 @@ class SimpleModel(object):
     For example, the following model minimizes the surface area of
     a soda can while constraining its volume::
 
-        from pyomo.contrib.simplmodel import *
+        from pyomo_simplmodel import *
         from math import pi
 
         m = SimpleModel()
