@@ -1,0 +1,52 @@
+WARNING: Constant objective detected, replacing with a placeholder to prevent
+    solver failure.
+2 Set Declarations
+    c_index : Dim=0, Dimen=1, Size=2, Domain=None, Ordered=False, Bounds=None
+        [1, 2]
+    o_index : Dim=0, Dimen=1, Size=1, Domain=None, Ordered=False, Bounds=None
+        [1]
+
+2 Var Declarations
+    x : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :   1.0 :     1 : False : False : Binary
+    y : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :   0.0 :     1 : False : False : Binary
+
+1 Objective Declarations
+    o : Size=1, Index=o_index, Active=True
+        Key : Active : Sense    : Expression
+          1 :   True : minimize :        1.0
+
+1 Constraint Declarations
+    c : Size=2, Index=c_index, Active=True
+        Key : Lower : Body  : Upper : Active
+          1 :  -Inf : x + y :   1.0 :   True
+          2 :   1.0 : x - y :  +Inf :   True
+
+6 Declarations: o_index o c_index c x y
+Model unknown
+
+  Variables:
+    x : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :   1.0 :     1 : False : False : Binary
+    y : Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :   0.0 :     1 : False : False : Binary
+
+  Objectives:
+    o : Size=1, Index=o_index, Active=True
+        Key : Active : Value
+          1 :   True :   1.0
+
+  Constraints:
+    c : Size=2
+        Key : Lower : Body : Upper
+          1 :  None :  1.0 :   1.0
+          2 :   1.0 :  1.0 :  None
+Status: optimal
+x = 1.000000
+y = 0.000000
+objective = 1.000000
