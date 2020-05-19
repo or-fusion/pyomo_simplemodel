@@ -1,8 +1,10 @@
 2 Set Declarations
-    c_index : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=None
-        [1, 2, 3]
-    o_index : Dim=0, Dimen=1, Size=1, Domain=None, Ordered=False, Bounds=None
-        [1]
+    c_index : Size=1, Index=None, Ordered=Insertion
+        Key  : Dimen : Domain : Size : Members
+        None :     1 :    Any :    3 : {1, 2, 3}
+    o_index : Size=1, Index=None, Ordered=Insertion
+        Key  : Dimen : Domain : Size : Members
+        None :     1 :    Any :    1 :    {1,}
 
 3 Var Declarations
     x : Size=1, Index=None
@@ -22,10 +24,10 @@
 
 1 Constraint Declarations
     c : Size=3, Index=c_index, Active=True
-        Key : Lower : Body     : Upper : Active
-          1 :  -Inf :    x + y :   5.0 :   True
-          2 :  10.0 :    x + z :  +Inf :   True
-          3 :   7.0 :  - y + z :   7.0 :   True
+        Key : Lower : Body    : Upper : Active
+          1 :  -Inf :   x + y :   5.0 :   True
+          2 :  10.0 :   x + z :  +Inf :   True
+          3 :   7.0 : - y + z :   7.0 :   True
 
 7 Declarations: o_index o c_index c x y z
 Model unknown
