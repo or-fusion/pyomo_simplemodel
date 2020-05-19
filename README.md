@@ -39,10 +39,6 @@ This software is available under the BSD License.
 ### Installation
 
 #### PyPI [![PyPI](https://img.shields.io/pypi/v/pyomo_simplemodel.svg?maxAge=2592000)]()
-<!---
-# PyPI download stats appear to be broken
-[![PyPI](https://img.shields.io/pypi/dm/pyomo_simplemodel.svg?maxAge=2592000)]()
---->
 
     pip install pyomo_simplemodel
     
@@ -54,10 +50,10 @@ This software is available under the BSD License.
 
 ### Getting Help
 
-* [Ask a Pyomo Question on StackExchange](https://stackoverflow.com/questions/ask?tags=pyomo)
+* [Ask a Question on StackExchange](https://stackoverflow.com/questions/ask?tags=pyomo)
 * [Pyomo Forum](https://groups.google.com/forum/?hl=en#!forum/pyomo-forum)
-* [Add a Ticket](https://github.com/Pyomo/pyomo_simplemodel/issues/new)
-* [Find a Ticket](https://github.com/Pyomo/pyomo_simplemodel/issues) and **Vote On It**!
+* [Add a Ticket](https://github.com/pyomo-annex/pyomo_simplemodel/issues/new)
+* [Find a Ticket](https://github.com/pyomo-annex/pyomo_simplemodel/issues) and **Vote On It**!
 
 
 ### Developers
