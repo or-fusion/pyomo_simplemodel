@@ -15,7 +15,7 @@
 
 ### News
 
-* (1/2020) The **pyomo_simplemodel** package has moved to the **PyomoCommunity** organization from the **Pyomo** organization.  This package was renamed from **pyomocontrib_simplemodel** to **pyomo_simplemodel**, and this capability is no longer available as the Pyomo subpackage **pyomo.contrib.simplemodel**.  In the future, **pyomo_simplemodel** will be distributed with **pyomo_community**.
+* (5/2020) The **pyomo_simplemodel** package has moved to the **pyomo-annex** organization (previously the **pyomocommunity** organization).  This package was renamed from **pyomocontrib_simplemodel** to **pyomo_simplemodel**, and this capability is no longer available as the Pyomo subpackage **pyomo.contrib.simplemodel**.  In the future, **pyomo_simplemodel** will be distributed with **pyomo_community** package.
 
 ### Description 
 
