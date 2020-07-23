@@ -1,21 +1,21 @@
 
-[![Actions Status](https://github.com/pyomo-annex/pyomo_simplemodel/workflows/continuous-integration/github/pr/linux/badge.svg)](https://github.com/pyomo-annex/pyomo_simplemodel/actions)
+[![Actions Status](https://github.com/or-fusion/pyomo_simplemodel/workflows/continuous-integration/github/pr/linux/badge.svg)](https://github.com/or-fusion/pyomo_simplemodel/actions)
 [![Documentation Status](https://readthedocs.org/projects/pyomo-simplemodel/badge/?version=latest)](http://pyomo-simplemodel.readthedocs.org/en/latest/)
 
-[![Pyomo Checks - GitHub Master](https://github.com/pyomo-annex/pyomo_simplemodel/workflows/pyomo-checks/master/badge.svg)](https://github.com/pyomo-annex/pyomo_simplemodel/actions)
-[![Pyomo Checks - PyPI](https://github.com/pyomo-annex/pyomo_simplemodel/workflows/pyomo-checks/pypi/badge.svg)](https://github.com/pyomo-annex/pyomo_simplemodel/actions)
-[![Pyomo Checks - Conda](https://github.com/pyomo-annex/pyomo_simplemodel/workflows/pyomo-checks/conda/badge.svg)](https://github.com/pyomo-annex/pyomo_simplemodel/actions)
+[![Pyomo Checks - GitHub Master](https://github.com/or-fusion/pyomo_simplemodel/workflows/pyomo-checks/master/badge.svg)](https://github.com/or-fusion/pyomo_simplemodel/actions)
+[![Pyomo Checks - PyPI](https://github.com/or-fusion/pyomo_simplemodel/workflows/pyomo-checks/pypi/badge.svg)](https://github.com/or-fusion/pyomo_simplemodel/actions)
+[![Pyomo Checks - Conda](https://github.com/or-fusion/pyomo_simplemodel/workflows/pyomo-checks/conda/badge.svg)](https://github.com/or-fusion/pyomo_simplemodel/actions)
 
-[![GitHub contributors](https://img.shields.io/github/contributors/pyomo-annex/pyomo_simplemodel.svg)](https://github.com/pyomo-annex/pyomo_simplemodel/graphs/contributors)
-[![Merged PRs](https://img.shields.io/github/issues-pr-closed-raw/pyomo-annex/pyomo_simplemodel.svg?label=merged+PRs)](https://github.com/pyomo-annex/pyomo_simplemodel/pulls?q=is:pr+is:merged)
-[![Issue stats](http://isitmaintained.com/badge/resolution/pyomo-annex/pyomo_simplemodel.svg)](http://isitmaintained.com/project/pyomo-annex/pyomo_simplemodel)
+[![GitHub contributors](https://img.shields.io/github/contributors/or-fusion/pyomo_simplemodel.svg)](https://github.com/or-fusion/pyomo_simplemodel/graphs/contributors)
+[![Merged PRs](https://img.shields.io/github/issues-pr-closed-raw/or-fusion/pyomo_simplemodel.svg?label=merged+PRs)](https://github.com/or-fusion/pyomo_simplemodel/pulls?q=is:pr+is:merged)
+[![Issue stats](http://isitmaintained.com/badge/resolution/or-fusion/pyomo_simplemodel.svg)](http://isitmaintained.com/project/or-fusion/pyomo_simplemodel)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 ## Overview
 
 ### News
 
-* (5/2020) The **pyomo_simplemodel** package has moved to the **pyomo-annex** organization (previously the **pyomocommunity** organization).  This package was renamed from **pyomocontrib_simplemodel** to **pyomo_simplemodel**, and this capability is no longer available as the Pyomo subpackage **pyomo.contrib.simplemodel**.  In the future, **pyomo_simplemodel** will be distributed with **pyomo_community** package.
+* (5/2020) The **pyomo_simplemodel** package has moved to the **or-fusion** organization (previously the **pyomocommunity** organization).  This package was renamed from **pyomocontrib_simplemodel** to **pyomo_simplemodel**, and this capability is no longer available as the Pyomo subpackage **pyomo.contrib.simplemodel**.  In the future, **pyomo_simplemodel** will be distributed with **pyomo_community** package.
 
 ### Description 
 
@@ -52,8 +52,8 @@ This software is available under the BSD License.
 
 * [Ask a Question on StackExchange](https://stackoverflow.com/questions/ask?tags=pyomo)
 * [Pyomo Forum](https://groups.google.com/forum/?hl=en#!forum/pyomo-forum)
-* [Add a Ticket](https://github.com/pyomo-annex/pyomo_simplemodel/issues/new)
-* [Find a Ticket](https://github.com/pyomo-annex/pyomo_simplemodel/issues) and **Vote On It**!
+* [Add a Ticket](https://github.com/or-fusion/pyomo_simplemodel/issues/new)
+* [Find a Ticket](https://github.com/or-fusion/pyomo_simplemodel/issues) and **Vote On It**!
 
 
 ### Developers
